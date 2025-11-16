@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB5FE514-6A5B-4743-932E-BE04878BF01B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NumberingNames</RootNamespace>
+    <AssemblyName>NumberingNames</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\NumberingNames\bin\Win64_Shipping_Client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Bannerlord.Harmony">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Bannerlord.Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MCM.UI.Adapter.MCMv5">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client\MCM.UI.Adapter.MCMv5.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MCMv5">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client\MCMv5.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MCMv5.UI">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client\MCMv5.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.Mdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.Pdb.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.Rocks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.Backports">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.Backports.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.Core">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.Iced">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.Iced.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.ILHelpers">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.ILHelpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.Utils.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaleWorlds.AchievementSystem">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.AchievementSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ActivitySystem">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.ActivitySystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.CampaignSystem">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.CampaignSystem.ViewModelCollection">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.ViewModelCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Core">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Core.ViewModelCollection">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Core.ViewModelCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Diamond">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Diamond.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Diamond.AccessProvider.Epic">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Epic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Diamond.AccessProvider.GDK">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.GDK.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Diamond.AccessProvider.GOG">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.GOG.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Diamond.AccessProvider.Steam">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Steam.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Diamond.AccessProvider.Test">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Diamond.AccessProvider.Test.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Diamond.ChatSystem.Library">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Diamond.ChatSystem.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.DotNet">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.DotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.DotNet.AutoGenerated">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.DotNet.AutoGenerated.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Engine">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Engine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Engine.AutoGenerated">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Engine.AutoGenerated.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Engine.GauntletUI">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Engine.GauntletUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.GauntletUI">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.GauntletUI.CodeGenerator">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.CodeGenerator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.GauntletUI.Data">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.GauntletUI.ExtraWidgets">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.ExtraWidgets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.GauntletUI.PrefabSystem">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.PrefabSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.GauntletUI.TooltipExtensions">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.TooltipExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.InputSystem">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.InputSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Library">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.LinQuick">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.LinQuick.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.Localization">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.Localization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ModuleManager">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.ModuleManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.AutoGenerated">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.AutoGenerated.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.Diamond">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Diamond.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.GauntletUI.Widgets">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.GauntletUI.Widgets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.Helpers">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Helpers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.Launcher.Library">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Launcher.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.Launcher.Steam">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Launcher.Steam.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.Multiplayer.Test">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.Multiplayer.Test.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.ViewModelCollection">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.ViewModelCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.ObjectSystem">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.ObjectSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.SaveSystem">
+      <HintPath>E:\Mount.and.Blade.II.Bannerlord.v1.2.10.42197-P2P\bin\Win64_Shipping_Client\TaleWorlds.SaveSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NumberingNamesBehavior.cs" />
+    <Compile Include="NumberingNamesEditor.cs" />
+    <Compile Include="NumberingNamesModule.cs" />
+    <Compile Include="NumberingNamesPatches.cs" />
+    <Compile Include="NumberingNamesSave.cs" />
+    <Compile Include="NumberingNamesSaveDefiner.cs" />
+    <Compile Include="NumberingNamesSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
